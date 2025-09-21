@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://beqefd1edv0i0"]
+[gd_scene load_steps=9 format=3 uid="uid://beqefd1edv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://djrh6vkyv1s66" path="res://scenes/paddle.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://hwmrhglr676p" path="res://scenes/bola.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bkythkke1x1m8" path="res://scenes/HUD.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dyogv8j8g6m6k" path="res://scenes/BreakoutVerso/block_formation_spawner.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" path="res://scenes/BreakoutVerso/block_formation_spawner.tscn" id="4_tbgi4"]
+[ext_resource type="Script" uid="uid://bm0k4va2ga35b" path="res://scripts/portalScripts/portalManager.gd" id="5_tbgi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(642, 20)
@@ -55,5 +56,8 @@ shape = SubResource("RectangleShape2D_jyhfs")
 [node name="Hud" parent="." instance=ExtResource("4_jyhfs")]
 
 [node name="BlockFormationSpawner" parent="." instance=ExtResource("4_tbgi4")]
+
+[node name="Manager" type="Node" parent="."]
+script = ExtResource("5_tbgi4")
 
 [connection signal="gol" from="Bola" to="Hud" method="_on_bola_gol"]

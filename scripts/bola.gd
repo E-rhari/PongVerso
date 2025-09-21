@@ -8,6 +8,7 @@ var dir_adv : bool
 var esq_adv : bool
 
 signal gol(lado: int)
+signal bateu_na_parede(onde: Vector2)
 
 func _ready() -> void:
 	speed = init_speed
@@ -38,6 +39,8 @@ func _physics_process(delta: float) -> void:
 			velocity.y = clamp(velocity.y, -speed, speed)
 			#print("+paddle: ", velocity)
 		velocity.x = sign(velocity.x) * speed
+		if (col.get_collider().is_in_group("Paredes")):
+			bateu_na_parede.emit(position)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	

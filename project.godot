@@ -33,6 +33,7 @@ Paredes="Teto e chão"
 GolDir=""
 GolEsq=""
 bola=""
+Portais=""
 
 [input]
 
