@@ -8,9 +8,8 @@ radius = 9.055386
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_372x7"]
 
-[node name="Bola" type="CharacterBody2D"]
+[node name="Bola" type="CharacterBody2D" groups=["bola"]]
 script = ExtResource("1_372x7")
-speed = 150.0
 
 [node name="BolaSprite2D" type="Sprite2D" parent="."]
 scale = Vector2(20, 20)

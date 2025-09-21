@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1nnbf6jfa276"
+path="res://.godot/imported/Pongverse Main Theme.mp3-0b8fced1598dd029ed48b687196f5aa1.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Pongverse Main Theme.mp3"
+dest_files=["res://.godot/imported/Pongverse Main Theme.mp3-0b8fced1598dd029ed48b687196f5aa1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

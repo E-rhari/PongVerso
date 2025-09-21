@@ -32,6 +32,7 @@ Paddles="Paddles"
 Paredes="Teto e chão"
 GolDir=""
 GolEsq=""
+bola=""
 
 [input]
 
