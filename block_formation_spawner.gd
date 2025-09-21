@@ -19,11 +19,21 @@ func confere_formacao_atual():
 		return
 
 	if atual_formation.get_node("BlockFormationManager").formation_restart:
-		formation_index = 1
-		formation = prox_formation[formation_index]
-		atual_formation.queue_free()
-		atual_formation = null
-		$SpawnDelay.start()
+		var manager = atual_formation.get_node("BlockFormationManager")
+		if manager.formation_restart:
+			# Desativa o sinalizador antes de iniciar o spawn da próxima
+			manager.formation_restart = false
+		
+			# Muda a formação
+			formation_index = 1
+			formation = prox_formation[formation_index]
+
+			# Remove a formação atual
+			atual_formation.queue_free()
+			atual_formation = null
+
+			# Inicia o delay
+			$SpawnDelay.start()
 
 func _on_spawn_delay_timeout() -> void:
 	spawn_formacao()
