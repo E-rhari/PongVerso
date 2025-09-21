@@ -1,12 +1,16 @@
 extends CharacterBody2D
 
-@export var speed : float = 100.0
+@export var init_speed : float = 100
+var speed : float
 var direction : Vector2
 var start_position : bool = false
 var dir_adv : bool
 var esq_adv : bool
 
+signal gol(lado: int)
+
 func _ready() -> void:
+	speed = init_speed
 	velocity = Vector2(speed,speed)
 
 func _physics_process(delta: float) -> void:
@@ -24,22 +28,28 @@ func _physics_process(delta: float) -> void:
 	
 	var col : KinematicCollision2D = move_and_collide(velocity * delta)
 	if col:
+		#print("test")
 		var normal : Vector2 = col.get_normal()
 		velocity = velocity.bounce(normal)
-		#if (col.get_collider().is_in_group("Paddles")):
-			#velocity.y += col.get_collider().velocity.y 
-			#velocity = velocity.normalized() * speed
+		#print(velocity)
+		if (col.get_collider().is_in_group("Paddles")):
+			velocity.x *= 1.1
+			velocity.y += col.get_collider().velocity.y
+			velocity.y = clamp(velocity.y, -speed, speed)
+			#print("+paddle: ", velocity)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-
+	
 	if (body.is_in_group("GolDir")):
-		speed = 100.0
+		emit_signal("gol", -1)
+		speed = init_speed
 		position = Vector2(319,179)
 		start_position = true
 		dir_adv = true
 
 	if (body.is_in_group("GolEsq")):
-		speed = 100.0
+		emit_signal("gol", 1)
+		speed = init_speed
 		position = Vector2(319,179)
 		start_position = true
 		esq_adv = true

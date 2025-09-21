@@ -9,6 +9,7 @@ size = Vector2(20, 50)
 [node name="Paddle" type="CharacterBody2D" groups=["Paddles"]]
 motion_mode = 1
 script = ExtResource("1_3xiby")
+speed = 200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_mo4dg")
