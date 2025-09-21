@@ -1,7 +1,7 @@
 extends Node2D
 
 var prox_formation := ["res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_1.tscn", "res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_2.tscn"]
-@export var formation_index : int = 0
+@export var formation_index : int = randi_range(0, len(prox_formation)-1)
 @onready var formation =  prox_formation[formation_index]
 
 
@@ -25,7 +25,7 @@ func confere_formacao_atual():
 			manager.formation_restart = false
 		
 			# Muda a formação
-			formation_index = 1
+			formation_index = randi_range(0, len(prox_formation)-1)
 			formation = prox_formation[formation_index]
 
 			# Remove a formação atual

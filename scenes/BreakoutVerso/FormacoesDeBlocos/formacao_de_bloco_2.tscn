@@ -10,7 +10,6 @@
 [node name="BreakoutBlock" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_5awae")]
 position = Vector2(244, 199)
 formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
-vida_do_bloco = 2
 
 [node name="BlockFormationManager" parent="." node_paths=PackedStringArray("atual_formation_blocks") instance=ExtResource("2_afo5j")]
 atual_formation_blocks = NodePath("../Blocks")
