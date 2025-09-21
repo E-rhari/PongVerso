@@ -1,7 +1,10 @@
 extends StaticBody2D
 
+@export var formacao_atual_de_blocos : Node2D
+
 @export var vida_do_bloco : int = 3
 
+# Cores
 @export var branco : Color
 @export var rosa : Color
 @export var vermelho : Color
@@ -15,6 +18,7 @@ func _process(_delta: float) -> void:
 	
 	# Remove o bloco caso sua vida chegue a zero
 	if (vida_do_bloco <= 0):
+			formacao_atual_de_blocos.atualiza_blocos()
 			queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://br7j1j67r83id"]
+
+[ext_resource type="Script" uid="uid://doo7sdj5ckt6d" path="res://scripts/breakoutScripts/block_formation_manager.gd" id="1_wjijx"]
+
+[node name="BlockFormationManager" type="Node2D"]
+script = ExtResource("1_wjijx")
+next_formation_array = ["", ""]
