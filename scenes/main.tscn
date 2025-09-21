@@ -60,4 +60,5 @@ shape = SubResource("RectangleShape2D_jyhfs")
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")
 
+[connection signal="bateu_no_paddle" from="Bola" to="Hud" method="_on_bola_bateu_no_paddle"]
 [connection signal="gol" from="Bola" to="Hud" method="_on_bola_gol"]

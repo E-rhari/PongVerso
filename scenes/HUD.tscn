@@ -31,3 +31,15 @@ offset_right = -30.0
 offset_bottom = 53.0
 grow_horizontal = 0
 text = "0"
+
+[node name="Recorde" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_right = 5.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "0"
