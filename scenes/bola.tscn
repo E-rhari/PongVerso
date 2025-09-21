@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://hwmrhglr676p"]
+
+[ext_resource type="Script" uid="uid://dt7e4x66gxnsx" path="res://scripts/bola.gd" id="1_372x7"]
+[ext_resource type="Texture2D" uid="uid://bwy4v2gbneult" path="res://sprites/prototyping/pixel.png" id="2_wvqho"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ycda"]
+radius = 9.055386
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_372x7"]
+
+[node name="Bola" type="CharacterBody2D"]
+script = ExtResource("1_372x7")
+
+[node name="BolaSprite2D" type="Sprite2D" parent="."]
+scale = Vector2(20, 20)
+texture = ExtResource("2_wvqho")
+
+[node name="BolaColisao" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6ycda")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_372x7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

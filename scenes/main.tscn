@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://beqefd1edv0i0"]
+[gd_scene load_steps=6 format=3 uid="uid://beqefd1edv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://djrh6vkyv1s66" path="res://scenes/paddle.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://hwmrhglr676p" path="res://scenes/bola.tscn" id="2_0wfyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(642, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
+size = Vector2(20, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(20, 364)
 
 [node name="main" type="Node2D"]
 
@@ -11,3 +21,31 @@ id = "0"
 [node name="Paddle2" parent="." instance=ExtResource("1_o5qli")]
 position = Vector2(540, 180)
 id = "1"
+
+[node name="Bola" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(322, 90)
+
+[node name="Teto" type="StaticBody2D" parent="." groups=["Paredes"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto"]
+position = Vector2(320, -10)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Chão" type="StaticBody2D" parent="." groups=["Paredes"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
+position = Vector2(321, 371)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="GolDir" type="StaticBody2D" parent="." groups=["GolDir"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolDir"]
+position = Vector2(651, 181)
+shape = SubResource("RectangleShape2D_sugp2")
+
+[node name="GolEsq" type="StaticBody2D" parent="." groups=["GolEsq"]]
+position = Vector2(322, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolEsq"]
+position = Vector2(-334, 93)
+shape = SubResource("RectangleShape2D_jyhfs")
