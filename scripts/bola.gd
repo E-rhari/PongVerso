@@ -33,10 +33,11 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.bounce(normal)
 		#print(velocity)
 		if (col.get_collider().is_in_group("Paddles")):
-			velocity.x *= 1.1
+			speed *= 1.1
 			velocity.y += col.get_collider().velocity.y
 			velocity.y = clamp(velocity.y, -speed, speed)
 			#print("+paddle: ", velocity)
+		velocity.x = sign(velocity.x) * speed
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	
