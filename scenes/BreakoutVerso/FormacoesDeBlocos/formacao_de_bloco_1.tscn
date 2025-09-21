@@ -8,15 +8,9 @@
 [node name="Blocks" type="Node2D" parent="."]
 
 [node name="BreakoutBlock" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
-position = Vector2(5, 10)
-formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
-vida_do_bloco = 1
-
-[node name="BreakoutBlock2" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
-position = Vector2(40, 10)
+position = Vector2(482, 225)
 formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
 vida_do_bloco = 1
 
 [node name="BlockFormationManager" parent="." node_paths=PackedStringArray("atual_formation_blocks") instance=ExtResource("2_lcds0")]
 atual_formation_blocks = NodePath("../Blocks")
-next_formation_array = ["", "res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_2.tscn"]

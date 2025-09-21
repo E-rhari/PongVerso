@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1pbodwm41ncf"]
+
+[ext_resource type="PackedScene" uid="uid://m7cm6vflxdyh" path="res://scenes/BreakoutVerso/breakout_block.tscn" id="1_5awae"]
+[ext_resource type="PackedScene" uid="uid://br7j1j67r83id" path="res://scenes/BreakoutVerso/block_formation_manager.tscn" id="2_afo5j"]
+
+[node name="FormacaoDeBloco1" type="Node2D"]
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="BreakoutBlock" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_5awae")]
+position = Vector2(244, 199)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+vida_do_bloco = 1
+
+[node name="BlockFormationManager" parent="." node_paths=PackedStringArray("atual_formation_blocks") instance=ExtResource("2_afo5j")]
+atual_formation_blocks = NodePath("../Blocks")
