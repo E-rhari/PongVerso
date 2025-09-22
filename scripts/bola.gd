@@ -19,11 +19,11 @@ func _physics_process(delta: float) -> void:
 	
 	if (start_position):
 		velocity = Vector2.ZERO
-		if (dir_adv and Input.is_action_just_pressed("acao_dir")):
+		if (dir_adv and Input.is_action_just_pressed("acao1")):
 			velocity = Vector2(speed,speed)
 			start_position = false
 			dir_adv = false
-		if (esq_adv and Input.is_action_just_pressed("acao_esq")):
+		if (esq_adv and Input.is_action_just_pressed("acao0")):
 			velocity = Vector2(-speed,-speed)
 			start_position = false
 			esq_adv = false
@@ -43,7 +43,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = sign(velocity.x) * speed
 		if (col.get_collider().is_in_group("Paredes")):
 			bateu_na_parede.emit(position)
-	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	
@@ -53,7 +52,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		position = Vector2(319,179)
 		start_position = true
 		dir_adv = true
-
+	
 	if (body.is_in_group("GolEsq")):
 		emit_signal("gol", 1)
 		speed = init_speed

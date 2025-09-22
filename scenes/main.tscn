@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://beqefd1edv0i0"]
+[gd_scene load_steps=11 format=3 uid="uid://beqefd1edv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://djrh6vkyv1s66" path="res://scenes/paddle.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://hwmrhglr676p" path="res://scenes/bola.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bkythkke1x1m8" path="res://scenes/HUD.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" path="res://scenes/BreakoutVerso/block_formation_spawner.tscn" id="4_tbgi4"]
-[ext_resource type="Script" uid="uid://bm0k4va2ga35b" path="res://scripts/portalScripts/portalManager.gd" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dyogv8j8g6m6k" path="res://scenes/BreakoutVerso/block_formation_spawner.tscn" id="4_tbgi4"]
+[ext_resource type="Script" uid="uid://cw5arkc2chhek" path="res://scripts/LevelManager.gd" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://bm0k4va2ga35b" path="res://scripts/portalScripts/portalManager.gd" id="6_tefeu"]
+[ext_resource type="Script" uid="uid://b4mr81uxnxsks" path="res://scripts/celesteScripts/celesteManager.gd" id="7_o6xl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(642, 20)
@@ -59,6 +61,9 @@ shape = SubResource("RectangleShape2D_jyhfs")
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")
+gamemodes = Array[Script]([ExtResource("6_tefeu"), ExtResource("7_o6xl0")])
+debug_gamemode = 1
 
 [connection signal="bateu_no_paddle" from="Bola" to="Hud" method="_on_bola_bateu_no_paddle"]
 [connection signal="gol" from="Bola" to="Hud" method="_on_bola_gol"]
+[connection signal="gol" from="Bola" to="Manager" method="_on_bola_gol"]

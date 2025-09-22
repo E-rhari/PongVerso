@@ -19,7 +19,6 @@ func _input(event: InputEvent) -> void:
 		$"Pontuação Jogador 2".visible = !$"Pontuação Jogador 2".visible
 		$Recorde.visible = !$Recorde.visible
 
-
 func _on_bola_bateu_no_paddle() -> void:
 	recorde += 1
 	$Recorde.text = str(recorde)
