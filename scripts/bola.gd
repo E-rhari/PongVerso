@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		#print(velocity)
 		if (col.get_collider().is_in_group("Paddles")):
 			bateu_no_paddle.emit()
-			speed *= 1.1
+			speed = clamp(speed * 1.1, 0, 666)
 			velocity.y += col.get_collider().velocity.y
 			velocity.y = clamp(velocity.y, -speed, speed)
 			#print("+paddle: ", velocity)
