@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dyogv8j8g6m6k"]
 
-[ext_resource type="Script" uid="uid://mm2oyr2xq8wm" path="res://block_formation_spawner.gd" id="1_ppgxo"]
+[ext_resource type="Script" uid="uid://mm2oyr2xq8wm" path="res://scripts/breakoutScripts/block_formation_spawner.gd" id="1_ppgxo"]
 
 [node name="BlockFormationSpawner" type="Node2D"]
 script = ExtResource("1_ppgxo")
