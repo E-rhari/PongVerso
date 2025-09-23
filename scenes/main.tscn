@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dyogv8j8g6m6k" path="res://scenes/BreakoutVerso/block_formation_spawner.tscn" id="4_tbgi4"]
 [ext_resource type="Script" uid="uid://cw5arkc2chhek" path="res://scripts/LevelManager.gd" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://bm0k4va2ga35b" path="res://scripts/portalScripts/portalManager.gd" id="6_tefeu"]
-[ext_resource type="Script" uid="uid://b4mr81uxnxsks" path="res://scripts/celesteScripts/celesteManager.gd" id="7_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://dmjrpljo46b35" path="res://sprites/pong_default/pong_bg.png" id="8_tipki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(642, 20)
@@ -61,8 +61,12 @@ shape = SubResource("RectangleShape2D_jyhfs")
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")
-gamemodes = Array[Script]([ExtResource("6_tefeu"), ExtResource("7_o6xl0")])
-debug_gamemode = 1
+gamemodes = Array[Script]([ExtResource("6_tefeu")])
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(320, 180)
+texture = ExtResource("8_tipki")
 
 [connection signal="bateu_no_paddle" from="Bola" to="Hud" method="_on_bola_bateu_no_paddle"]
 [connection signal="gol" from="Bola" to="Hud" method="_on_bola_gol"]

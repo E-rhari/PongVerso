@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://djrh6vkyv1s66"]
 
 [ext_resource type="Script" uid="uid://ch8cxp6qaubio" path="res://scripts/paddle.gd" id="1_3xiby"]
-[ext_resource type="Texture2D" uid="uid://bwy4v2gbneult" path="res://sprites/prototyping/pixel.png" id="2_y7wee"]
+[ext_resource type="Texture2D" uid="uid://ce42b3o825qla" path="res://sprites/pong_default/paddle_base.png" id="2_y7wee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4dg"]
-size = Vector2(20, 50)
+size = Vector2(12, 60)
 
 [node name="Paddle" type="CharacterBody2D" groups=["Paddles"]]
 motion_mode = 1
@@ -15,5 +15,4 @@ speed = 200.0
 shape = SubResource("RectangleShape2D_mo4dg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(20, 50)
 texture = ExtResource("2_y7wee")

@@ -49,13 +49,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.is_in_group("GolDir")):
 		emit_signal("gol", -1)
 		speed = init_speed
-		position = Vector2(319,179)
+		position = Vector2(322,179)
 		start_position = true
 		dir_adv = true
 	
 	if (body.is_in_group("GolEsq")):
 		emit_signal("gol", 1)
 		speed = init_speed
-		position = Vector2(319,179)
+		position = Vector2(322,179)
 		start_position = true
 		esq_adv = true

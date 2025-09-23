@@ -1,6 +1,0 @@
-Para a paddle e a ball há a versão normal e a versão outline. Na prática, só será necessário usar o para a Ball.
-Para aplicar, basta ter dois nodes Sprite2D na cena da bola, um com o outline e o outro com a base.
-
-Também coloquei versões do fundo com e sem placar, caso queiram que eu faça placares customizados para cada tema só me avisar, deixarei aqui como mockup também.
-
-O tamanho da paddle, em pixels, é 12x60 e a bola é 8x8.
