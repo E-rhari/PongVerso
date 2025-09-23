@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var prox_formation := ["res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_1.tscn", "res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_2.tscn"]
 @export var formation_index : int = randi_range(0, len(prox_formation)-1)
@@ -33,10 +33,8 @@ func confere_formacao_atual():
 			atual_formation = null
 
 			# Inicia o delay
-			$SpawnDelay.start()
-
-func _on_spawn_delay_timeout() -> void:
-	spawn_formacao()
+			await get_tree().create_timer(2).timeout
+			spawn_formacao()
 
 func spawn_formacao():
 	var aux = load(formation)
