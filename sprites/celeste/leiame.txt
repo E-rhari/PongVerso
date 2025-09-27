@@ -1,0 +1,9 @@
+1. A bola é um spritesheet, podem deixar na velocidade que preferirem, em loop
+
+2. A paddle está sendo enviada ambas juntas: a que PODE usar dash e a que NÃO PODE usar dash (dash gasto)
+
+3. O trilho será posicionado logo atrás da paddle, ele é uma spritesheet que ao mover para cima, ele deve animar em um sentido. Para mover para baixo, deve-se
+rodar a animação ao contrário. Ele deve ser posicionado 26px abaixo do topo da tela
+
+4. Eu recomendo criarem dois sistemas de partículas para dar mais ambientação, um com uma cor azul-clara e outro por cima da cor branca
+(a partícula em si seria pixels individuais ou 2x2), dando um efeito de estar nevando.
