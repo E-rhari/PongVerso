@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwolqsuw8n872"
+path="res://.godot/imported/Pongverse Celete Theme.mp3-1c63f6691a1e8b8acc999433fdeffed4.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Celeste_Music/Pongverse Celete Theme.mp3"
+dest_files=["res://.godot/imported/Pongverse Celete Theme.mp3-1c63f6691a1e8b8acc999433fdeffed4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
