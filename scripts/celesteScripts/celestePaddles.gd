@@ -5,14 +5,36 @@ extends CharacterBody2D
 
 const dash_distance: float = 100
 const dash_time: float = 0.08
-const dash_cooldown: float = 1
+const dash_cooldown: float = 1.5
 
 var can_dash: bool = true
 var is_dashing: bool = false
 var dash_vector: Vector2 = Vector2.ZERO
 var distance_traveled: float = 0
 
+var trilho : AnimatedSprite2D
+var anim_time : float = 20
+
+func _init() -> void:
+	await Engine.get_main_loop().process_frame
+	set_process(true)
+	trilho = AnimatedSprite2D.new()
+	trilho.sprite_frames = preload("uid://dy7k6o8y7165g")
+	trilho.position = Vector2(position.x, 180)
+	$"../Manager".get_child(0).add_child(trilho)
+
+func _process(delta: float) -> void:
+	$Anim2D.frame = can_dash
+	var vel = get_real_velocity().y / speed
+	anim_time += delta * vel * 20
+	print(anim_time)
+	var frames = trilho.sprite_frames.get_frame_count(trilho.animation)
+	trilho.frame = int(anim_time) % frames
+	
+	#trilho.sprite_frames.set_animation_speed("default", velocity.y)
+
 func _physics_process(delta: float) -> void:
+	
 	if (is_dashing):
 		velocity = dash_vector
 		move_and_slide()

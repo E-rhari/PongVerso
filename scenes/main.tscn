@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://beqefd1edv0i0"]
+[gd_scene load_steps=14 format=3 uid="uid://beqefd1edv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://djrh6vkyv1s66" path="res://scenes/paddle.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://hwmrhglr676p" path="res://scenes/bola.tscn" id="2_0wfyh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://mm2oyr2xq8wm" path="res://scripts/breakoutScripts/block_formation_spawner.gd" id="7_tipki"]
 [ext_resource type="Script" uid="uid://c6luqa2j61tmx" path="res://scripts/undertaleScripts/undertaleManager.gd" id="8_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dmjrpljo46b35" path="res://sprites/pong_default/pong_bg.png" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://d1nnbf6jfa276" path="res://Audio/Music/Pong_Music/Pongverse Main Theme.mp3" id="10_choun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(642, 20)
@@ -58,15 +59,20 @@ position = Vector2(-334, 93)
 shape = SubResource("RectangleShape2D_jyhfs")
 
 [node name="Hud" parent="." instance=ExtResource("4_jyhfs")]
+z_index = -1
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")
 gamemodes = Array[Script]([ExtResource("6_tefeu"), ExtResource("7_o6xl0"), ExtResource("7_tipki"), ExtResource("8_85g3d")])
 
-[node name="Background" type="Sprite2D" parent="."]
-z_index = -1
+[node name="Background" type="Sprite2D" parent="." groups=["Background"]]
+z_index = -2
 position = Vector2(320, 180)
 texture = ExtResource("8_tipki")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_choun")
+autoplay = true
 
 [connection signal="bateu_no_paddle" from="Bola" to="Hud" method="_on_bola_bateu_no_paddle"]
 [connection signal="gol" from="Bola" to="Hud" method="_on_bola_gol"]

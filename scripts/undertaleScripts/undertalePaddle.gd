@@ -24,3 +24,5 @@ func _physics_process(delta: float) -> void:
 			on_floor = true
 	
 	move_and_slide()
+
+var music = preload("uid://dv5gshfopqhdy")

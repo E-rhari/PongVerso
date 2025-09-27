@@ -1,0 +1,60 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://7wqrdrg1an12"]
+
+[ext_resource type="Texture2D" uid="uid://coc3pjns0jiv5" path="res://sprites/celeste/celese_ballSheet.png" id="1_hqkkd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovycp"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge1db"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(10, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ggeu"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(20, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsfwy"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(30, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lorl"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(40, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q32ah"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(50, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsu6h"]
+atlas = ExtResource("1_hqkkd")
+region = Rect2(60, 0, 10, 10)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovycp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge1db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ggeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsfwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lorl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q32ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsu6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,15 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://by0chl6ays0a1"]
+
+[ext_resource type="Texture2D" uid="uid://ce42b3o825qla" path="res://sprites/pong_default/paddle_base.png" id="1_wi4ce"]
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wi4ce")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

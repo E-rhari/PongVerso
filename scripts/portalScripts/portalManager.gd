@@ -15,3 +15,5 @@ func spawn_portal(onde: Vector2):
 	if (portal_color):
 		instance.get_child(0).modulate = Color("0065ff")
 	add_child(instance)
+
+var music = preload("uid://drn8q3sv3r6dy")

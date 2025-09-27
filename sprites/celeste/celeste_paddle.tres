@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://7mvrhekto7s2"]
+
+[ext_resource type="Texture2D" uid="uid://c8fu2xerivb4g" path="res://sprites/celeste/celeste_paddle.png" id="1_ibm72"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikfmu"]
+atlas = ExtResource("1_ibm72")
+region = Rect2(0, 0, 12, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gphnj"]
+atlas = ExtResource("1_ibm72")
+region = Rect2(12, 0, 12, 60)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikfmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gphnj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
