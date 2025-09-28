@@ -8,7 +8,75 @@
 [node name="Blocks" type="Node2D" parent="."]
 
 [node name="BreakoutBlock" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
-position = Vector2(482, 225)
+position = Vector2(320, 240)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock2" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(320, 200)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock3" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(320, 160)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock5" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(320, 280)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock6" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(320, 120)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock7" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(320, 80)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock9" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(350, 240)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock10" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(350, 200)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock11" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(350, 160)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock12" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(350, 280)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock13" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(350, 120)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock14" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(350, 80)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock27" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(290, 240)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock28" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(290, 200)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock29" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(290, 160)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock30" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(290, 280)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock31" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(290, 120)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock32" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_bexgi")]
+position = Vector2(290, 80)
 formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
 
 [node name="BlockFormationManager" parent="." node_paths=PackedStringArray("atual_formation_blocks") instance=ExtResource("2_lcds0")]

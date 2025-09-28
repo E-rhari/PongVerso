@@ -1,6 +1,6 @@
 extends Node
 
-var prox_formation := ["res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_1.tscn", "res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_2.tscn"]
+var prox_formation := ["res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_1.tscn", "res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_2.tscn","res://scenes/BreakoutVerso/FormacoesDeBlocos/formacao_de_bloco_3.tscn"]
 @export var formation_index : int = randi_range(0, len(prox_formation)-1)
 @onready var formation =  prox_formation[formation_index]
 
