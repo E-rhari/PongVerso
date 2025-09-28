@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://puvw44clmobh"
+path="res://.godot/imported/Pongverse Portal Theme Paused.mp3-3ea94debb246dab4e00d87c498217698.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Portal_Music/Pongverse Portal Theme Paused.mp3"
+dest_files=["res://.godot/imported/Pongverse Portal Theme Paused.mp3-3ea94debb246dab4e00d87c498217698.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

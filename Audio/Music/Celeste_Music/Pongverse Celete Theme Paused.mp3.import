@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://04wek5ydvhv2"
+path="res://.godot/imported/Pongverse Celete Theme Paused.mp3-b62452c82686249d1b42020e547e19a0.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Celeste_Music/Pongverse Celete Theme Paused.mp3"
+dest_files=["res://.godot/imported/Pongverse Celete Theme Paused.mp3-b62452c82686249d1b42020e547e19a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
