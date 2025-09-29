@@ -2,11 +2,12 @@ extends Node
 
 @export var gamemodes: Array[Script]
 @export var debug_gamemode : Variant
+@export var start_on_pong : bool = true
 @onready var speaker = $"../AudioStreamPlayer"
 var current_gamemode: Node
 
 func _ready() -> void:
-	init_gamemode()
+	if (not start_on_pong): init_gamemode()
 
 func init_gamemode() -> void:
 	
@@ -32,12 +33,12 @@ func init_gamemode() -> void:
 	if (current_gamemode.get("music")):
 		speaker.stream = current_gamemode.music
 	else:
-		speaker.stream = preload("uid://d1nnbf6jfa276")
+		speaker.stream = preload("uid://c6b5o405dmxxl")
 	speaker.play()
 
 
 func end_gamemode() -> void:
-	current_gamemode.queue_free()
+	if(current_gamemode): current_gamemode.queue_free()
 	get_tree().get_first_node_in_group("bola").get_node("BolaAnim2D").sprite_frames = preload("uid://bj2j5bk3e558j")
 	get_tree().get_first_node_in_group("Background").texture = preload("uid://dmjrpljo46b35")
 	for i in get_tree().get_nodes_in_group("Paddles"):
@@ -45,4 +46,5 @@ func end_gamemode() -> void:
 	
 func _on_bola_gol(_lado: int) -> void:
 	end_gamemode()
+	await get_tree().process_frame
 	init_gamemode()

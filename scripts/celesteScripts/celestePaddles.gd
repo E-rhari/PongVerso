@@ -16,7 +16,6 @@ var trilho : AnimatedSprite2D
 var anim_time : float = 20
 
 func _init() -> void:
-	await Engine.get_main_loop().process_frame
 	set_process(true)
 	trilho = AnimatedSprite2D.new()
 	trilho.sprite_frames = preload("uid://dy7k6o8y7165g")

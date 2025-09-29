@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://mm2oyr2xq8wm" path="res://scripts/breakoutScripts/block_formation_spawner.gd" id="7_tipki"]
 [ext_resource type="Script" uid="uid://c6luqa2j61tmx" path="res://scripts/undertaleScripts/undertaleManager.gd" id="8_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dmjrpljo46b35" path="res://sprites/pong_default/pong_bg.png" id="8_tipki"]
-[ext_resource type="AudioStream" uid="uid://d1nnbf6jfa276" path="res://Audio/Music/Pong_Music/Pongverse Main Theme.mp3" id="10_choun"]
+[ext_resource type="AudioStream" uid="uid://c6b5o405dmxxl" path="res://Audio/Music/Pong_Music/Pongverse Main Theme Short.mp3" id="10_choun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(642, 20)
