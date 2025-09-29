@@ -24,10 +24,9 @@ func _init() -> void:
 	$"../Manager".get_child(0).add_child(trilho)
 
 func _process(delta: float) -> void:
-	$Anim2D.frame = can_dash
+	$Anim2D.frame = not can_dash
 	var vel = get_real_velocity().y / speed
 	anim_time += delta * vel * 20
-	print(anim_time)
 	var frames = trilho.sprite_frames.get_frame_count(trilho.animation)
 	trilho.frame = int(anim_time) % frames
 	

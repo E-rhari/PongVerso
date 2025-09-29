@@ -18,4 +18,4 @@ func _on_body_entered(body: Node2D) -> void:
 		if portal != self:
 			body.position = portal.position
 			portal.enabled = false
-	if (vezes_usado >= 2): queue_free()
+	if (vezes_usado >= 3): queue_free()

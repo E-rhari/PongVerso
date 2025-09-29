@@ -39,4 +39,4 @@ func confere_formacao_atual():
 func spawn_formacao():
 	var aux = load(formation)
 	atual_formation = aux.instantiate()
-	add_child(atual_formation)
+	add_child.call_deferred(atual_formation)
