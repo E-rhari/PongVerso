@@ -8,7 +8,12 @@ extends Node
 #@onready var init_accel = bola.acceleration
 @onready var init_scale = bola.scale
 
+var score_p : Array[int] = [0, 0]
+var ball_owner = null
+var ball_colors : Array[Color] = [Color.BLUE, Color.RED]
+
 func _ready() -> void:
+	bola.connect("bateu_no_paddle", _switch_owner)
 	#bola.acceleration = 1.01
 	bola.scale *= 2
 	var scene = patterns[randi() % patterns.size()]
@@ -18,7 +23,12 @@ func _ready() -> void:
 	bola.connect("gol", _teleportar_bola)
 
 func _teleportar_bola(lado: int) -> void:
-	bola.position += Vector2.RIGHT * lado * 600
+	print(score_p)
+	bola.position += Vector2.RIGHT * lado * 620
+
+func _switch_owner(lado: int):
+	ball_owner = lado
+	bola.get_node("BolaAnim2D").modulate = ball_colors[ball_owner]
 
 func _exit_tree() -> void:
 	#bola.acceleration = init_accel

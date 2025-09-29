@@ -9,7 +9,7 @@ var esq_adv : bool
 
 signal gol(lado: int)
 signal bateu_na_parede(onde: Vector2)
-signal bateu_no_paddle
+signal bateu_no_paddle(lado: int)
 
 func _ready() -> void:
 	speed = init_speed
@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		var normal : Vector2 = col.get_normal()
 		velocity = velocity.bounce(normal)
 		if (col.get_collider().is_in_group("Paddles")):
-			bateu_no_paddle.emit()
+			bateu_no_paddle.emit(int(col.get_collider().id))
 			speed = clamp(speed * 1.1, 0, 666)
 			velocity.y += col.get_collider().get_real_velocity().y
 			velocity.y = clamp(velocity.y, -speed, speed)
@@ -41,10 +41,9 @@ func _physics_process(delta: float) -> void:
 		if (col.get_collider().is_in_group("Paredes")):
 			bateu_na_parede.emit(position)
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	
-	if (body.is_in_group("GolDir")):
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if (area.is_in_group("GolDir")):
 		emit_signal("gol", -1)
-	
-	if (body.is_in_group("GolEsq")):
+		
+	if (area.is_in_group("GolEsq")):
 		emit_signal("gol", 1)

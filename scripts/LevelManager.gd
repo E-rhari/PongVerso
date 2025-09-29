@@ -48,3 +48,12 @@ func _on_bola_gol(_lado: int) -> void:
 	end_gamemode()
 	await get_tree().process_frame
 	init_gamemode()
+
+var fullscreen: bool = false
+func _input(event: InputEvent) -> void:
+	if(event.is_action_pressed("ui_home")):
+		if (fullscreen):
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		fullscreen = not fullscreen
