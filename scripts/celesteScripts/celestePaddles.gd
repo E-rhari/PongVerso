@@ -21,6 +21,7 @@ func _init() -> void:
 	trilho = AnimatedSprite2D.new()
 	trilho.sprite_frames = preload("uid://dy7k6o8y7165g")
 	trilho.position = Vector2(position.x, 180)
+	trilho.z_index = -1
 	$"../Manager".get_child(0).add_child(trilho)
 
 func _process(delta: float) -> void:
