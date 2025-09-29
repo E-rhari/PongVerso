@@ -13,7 +13,7 @@ var dash_vector: Vector2 = Vector2.ZERO
 var distance_traveled: float = 0
 
 var trilho : AnimatedSprite2D
-var anim_time : float = 20
+var anim_time : float = 30
 
 func _init() -> void:
 	set_process(true)

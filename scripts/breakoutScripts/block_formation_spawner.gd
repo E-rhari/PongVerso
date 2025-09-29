@@ -47,3 +47,5 @@ func spawn_formacao():
 	var aux = load(formation)
 	atual_formation = aux.instantiate()
 	add_child.call_deferred(atual_formation)
+
+var bg = preload("uid://r5fqn2035x51")

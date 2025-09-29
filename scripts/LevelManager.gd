@@ -7,7 +7,7 @@ extends Node
 var current_gamemode: Node
 
 func _ready() -> void:
-	if (not start_on_pong): init_gamemode()
+	if (not start_on_pong or debug_gamemode): init_gamemode()
 
 func init_gamemode() -> void:
 	

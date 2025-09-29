@@ -9,25 +9,21 @@ extends StaticBody2D
 @export var rosa : Color
 @export var vermelho : Color
 
-
-func _ready() -> void:
-	pass
-
-func _process(_delta: float) -> void:
-	altera_cor()
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	# Retira "vida" do bloco com a colisão com a bola
+	if (body.is_in_group("bola")):
+		vida_do_bloco -= 1
 	
 	# Remove o bloco caso sua vida chegue a zero
 	if (vida_do_bloco <= 0):
 			formacao_atual_de_blocos.atualiza_blocos()
 			queue_free()
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	# Retira "vida" do bloco com a colisão com a bola
-	if (body.is_in_group("bola")):
-		vida_do_bloco -= 1
+	
+	altera_cor()
 
 # Função que altera a cor do bloco a cada vez que ele toma hit da bola
 func altera_cor():
+	$Sprite2D.frame = 3 - vida_do_bloco
 	if (vida_do_bloco == 3):
 		modulate = branco
 	elif (vida_do_bloco == 2):

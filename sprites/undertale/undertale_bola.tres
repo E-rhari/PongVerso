@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://c0yikrqbdeeth"]
+
+[ext_resource type="Texture2D" uid="uid://cifw0ybwvm857" path="res://sprites/undertale/undertale_bola.png" id="1_72kb5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_72kb5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

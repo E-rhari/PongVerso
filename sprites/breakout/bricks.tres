@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dbrbtcmb0tmpi"]
+
+[ext_resource type="Texture2D" uid="uid://cfdkciuf5muk1" path="res://sprites/breakout/bricks.png" id="1_wccl4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u45lt"]
+atlas = ExtResource("1_wccl4")
+region = Rect2(0, 0, 7, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6x7h"]
+atlas = ExtResource("1_wccl4")
+region = Rect2(0, 18, 7, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkrvq"]
+atlas = ExtResource("1_wccl4")
+region = Rect2(0, 36, 7, 15)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u45lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6x7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkrvq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

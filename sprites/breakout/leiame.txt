@@ -1,1 +1,0 @@
-A mesma paddle e bola do pong_default serão usadas
