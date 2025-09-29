@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://broubpfkef0ey"]
+
+[ext_resource type="PackedScene" uid="uid://m7cm6vflxdyh" path="res://scenes/BreakoutVerso/breakout_block.tscn" id="1_foq4x"]
+[ext_resource type="PackedScene" uid="uid://br7j1j67r83id" path="res://scenes/BreakoutVerso/block_formation_manager.tscn" id="2_1u8jh"]
+
+[node name="FormacaoDeBloco1" type="Node2D"]
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="BreakoutBlock" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(320, 240)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock2" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(320, 200)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock5" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(320, 307)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock7" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(320, 80)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock13" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(350, 112)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock29" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(290, 157)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BreakoutBlock31" parent="Blocks" node_paths=PackedStringArray("formacao_atual_de_blocos") instance=ExtResource("1_foq4x")]
+position = Vector2(290, 112)
+formacao_atual_de_blocos = NodePath("../../BlockFormationManager")
+
+[node name="BlockFormationManager" parent="." node_paths=PackedStringArray("atual_formation_blocks") instance=ExtResource("2_1u8jh")]
+atual_formation_blocks = NodePath("../Blocks")
