@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://bssgjguak5b00"]
+
+[ext_resource type="Texture2D" uid="uid://pjh3lhb5lw3b" path="res://sprites/mainmenu/pongMENU.png" id="1_vjb58"]
+[ext_resource type="FontFile" uid="uid://cw4s4enqdlii5" path="res://fonts/Kenney Space.ttf" id="2_con2f"]
+
+[sub_resource type="GDScript" id="GDScript_vjb58"]
+script/source = "extends Control
+
+var fullscreen : bool = false
+func _input(event: InputEvent) -> void:
+	if(event.is_action_pressed(\"acao1\")):
+		get_tree().root.add_child(preload(\"uid://beqefd1edv0i0\").instantiate())
+		queue_free()
+	if(event.is_action_pressed(\"ui_home\")):
+		if (fullscreen):
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		fullscreen = not fullscreen
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_mhnvy"]
+font = ExtResource("2_con2f")
+font_size = 18
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_vjb58")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vjb58")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = -150.0
+offset_right = 267.0
+offset_bottom = -89.0
+grow_vertical = 0
+text = "Aperte ENTER
+para jogar"
+label_settings = SubResource("LabelSettings_mhnvy")

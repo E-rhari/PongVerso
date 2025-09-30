@@ -1,8 +1,11 @@
 extends Node
 
 @onready var paddles = get_tree().get_nodes_in_group("Paddles")
+@onready var bola = get_tree().get_first_node_in_group("bola")
+@onready var init_accel = bola.acceleration
 
 func _ready() -> void:
+	bola.acceleration = 1.1
 	
 	for i in paddles.size():
 		var spd: int = paddles[i].speed

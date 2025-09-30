@@ -1,0 +1,74 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://db1xij3dfn7xq"]
+
+[ext_resource type="Texture2D" uid="uid://cmruf8k30kmc3" path="res://sprites/mainmenu/pongIcons.png" id="1_8ya1w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft4wa"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj4ob"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n3pk"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xabue"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms13s"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gu18"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fomi"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uhi5"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ev7qt"]
+atlas = ExtResource("1_8ya1w")
+region = Rect2(128, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft4wa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nj4ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n3pk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xabue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms13s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gu18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fomi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uhi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ev7qt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

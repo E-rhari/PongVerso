@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cbxfhhpfeogb7"]
+
+[ext_resource type="Texture2D" uid="uid://dun4gayhbo47q" path="res://sprites/portal/portalOrange.png" id="1_1wt7a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcgvj"]
+atlas = ExtResource("1_1wt7a")
+region = Rect2(0, 0, 50, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jqsa"]
+atlas = ExtResource("1_1wt7a")
+region = Rect2(50, 0, 50, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l6r2"]
+atlas = ExtResource("1_1wt7a")
+region = Rect2(100, 0, 50, 58)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcgvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jqsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0l6r2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

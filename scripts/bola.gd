@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var init_speed : float = 100
 var speed : float
+var acceleration : float = 1.075
 var direction : Vector2
 var start_position : bool = false
 var dir_adv : bool
@@ -34,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.bounce(normal)
 		if (col.get_collider().is_in_group("Paddles")):
 			bateu_no_paddle.emit(int(col.get_collider().id))
-			speed = clamp(speed * 1.1, 0, 666)
+			speed = clamp(speed * acceleration, 0, 666)
 			velocity.y += col.get_collider().get_real_velocity().y
 			velocity.y = clamp(velocity.y, -speed, speed)
 		velocity.x = sign(velocity.x) * speed

@@ -5,6 +5,8 @@ extends Node
 @export var start_on_pong : bool = true
 @onready var speaker = $"../AudioStreamPlayer"
 var current_gamemode: Node
+var current_index: int
+var last_index: int
 
 func _ready() -> void:
 	if (not start_on_pong or debug_gamemode): init_gamemode()
@@ -16,7 +18,11 @@ func init_gamemode() -> void:
 		game.set_script(gamemodes[debug_gamemode])
 		get_tree().get_first_node_in_group("bola").disconnect("gol", _on_bola_gol)
 	else:
-		game.set_script(gamemodes[randi() % gamemodes.size()])
+		current_index = randi() % gamemodes.size()
+		while(current_index == last_index):
+			current_index = randi() % gamemodes.size()
+		last_index = current_index
+		game.set_script(gamemodes[current_index])
 	current_gamemode = game
 	add_child(game)
 	

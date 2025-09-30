@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://dkn6o0fgnee05"]
+
+[ext_resource type="Texture2D" uid="uid://ctfcylpb5fw6f" path="res://sprites/portal/portalFundo.png" id="1_n0prg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n0prg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

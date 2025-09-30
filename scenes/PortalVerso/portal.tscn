@@ -1,25 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://0ir3rnxr83ts"]
+[gd_scene load_steps=4 format=3 uid="uid://0ir3rnxr83ts"]
 
 [ext_resource type="Script" uid="uid://jhrf4cuowlht" path="res://scripts/portalScripts/portal.gd" id="1_s4nqg"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_s4nqg"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kxxou"]
-width = 40
-height = 20
-noise = SubResource("FastNoiseLite_s4nqg")
+[ext_resource type="SpriteFrames" uid="uid://24wclmburfy0" path="res://sprites/portal/portalBlue.tres" id="2_kxxou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4nqg"]
-size = Vector2(40, 20)
+size = Vector2(28, 54)
 
 [node name="Portal" type="Area2D" groups=["Portais"]]
 script = ExtResource("1_s4nqg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.6039216, 0, 1)
-texture = SubResource("NoiseTexture2D_kxxou")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_s4nqg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_kxxou")
+frame = 2
+frame_progress = 0.2943896
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

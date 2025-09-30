@@ -7,7 +7,7 @@ extends Node
 @onready var paddles = get_tree().get_nodes_in_group("Paddles")
 @onready var background = get_tree().get_first_node_in_group("Background")
 
-#@onready var init_accel = bola.acceleration
+@onready var init_accel = bola.acceleration
 @onready var init_scale = bola.scale
 
 var score_p : Array[int] = [0, 0]
@@ -23,7 +23,7 @@ func _ready() -> void:
 	hud.get_node("Pontuação Menor 1").visible = true
 	hud.get_node("Pontuação Menor 2").visible = true
 	bola.connect("bateu_no_paddle", _switch_owner)
-	#bola.acceleration = 1.01
+	bola.acceleration = 1.03
 	bola.modulate = Color.YELLOW
 	bola.get_node("BolaColisao").scale *= 2
 	bola.get_node("Area2D").scale *= 2
@@ -48,7 +48,7 @@ func _switch_owner(lado: int):
 	background.modulate *= ball_colors[ball_owner]
 
 func _exit_tree() -> void:
-	#bola.acceleration = init_accel
+	bola.acceleration = init_accel
 	bola.scale = init_scale
 	bola.modulate = Color.WHITE
 	bola.rotation = 0
