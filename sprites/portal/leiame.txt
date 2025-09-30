@@ -1,0 +1,3 @@
+Os portais estão na direção que imagino que ficariam, se quiser mudar é só mudar o flip_h deles
+
+A bola é pra rotacionar que nem a de Undertale
