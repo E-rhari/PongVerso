@@ -37,6 +37,9 @@ func _ready() -> void:
 	await get_tree().process_frame
 	bola.get_node("BolaAnim2D").play()
 	background.play()
+	await get_tree().create_timer(12.69).timeout
+	get_parent()._on_bola_gol(0)
+	hud._on_bola_gol(2 * score_p.find(score_p.max()) - 1)
 
 func _teleportar_bola(lado: int) -> void:
 	bola.position += Vector2.RIGHT * lado * 620
@@ -45,7 +48,7 @@ func _switch_owner(lado: int):
 	if (ball_owner != lado): background.speed_scale *= -1
 	ball_owner = lado
 	bola.modulate = ball_colors[ball_owner]
-	background.modulate *= ball_colors[ball_owner]
+	background.modulate = ball_colors[ball_owner] * Color(1, 1, 1, .25)
 
 func _exit_tree() -> void:
 	bola.acceleration = init_accel

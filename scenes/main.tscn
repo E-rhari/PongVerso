@@ -65,6 +65,7 @@ z_index = -1
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")
 gamemodes = Array[Script]([ExtResource("7_o6xl0"), ExtResource("7_tipki"), ExtResource("8_85g3d"), ExtResource("6_tefeu"), ExtResource("9_ya4ey")])
+debug_gamemode = 2
 
 [node name="Background" type="AnimatedSprite2D" parent="." groups=["Background"]]
 z_index = -2
