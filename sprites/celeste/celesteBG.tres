@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://3tnuw4u4t8kf"]
+
+[ext_resource type="Texture2D" uid="uid://dvd1y7jm5bhdo" path="res://sprites/celeste/celesteBG.png" id="1_nlvqk"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nlvqk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

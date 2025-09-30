@@ -48,4 +48,4 @@ func spawn_formacao():
 	atual_formation = aux.instantiate()
 	add_child.call_deferred(atual_formation)
 
-var bg = preload("uid://r5fqn2035x51")
+var bg = preload("uid://wm4recsv7c2j")

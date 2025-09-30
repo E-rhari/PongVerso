@@ -24,7 +24,7 @@ func init_gamemode() -> void:
 	if(current_gamemode.get("ball")):
 		get_tree().get_first_node_in_group("bola").get_node("BolaAnim2D").sprite_frames = current_gamemode.get("ball")
 	if(current_gamemode.get("bg")):
-		get_tree().get_first_node_in_group("Background").texture = current_gamemode.get("bg")
+		get_tree().get_first_node_in_group("Background").sprite_frames = current_gamemode.get("bg")
 	if(current_gamemode.get("paddle")):
 			for i in get_tree().get_nodes_in_group("Paddles"):
 				i.get_node("Anim2D").sprite_frames = current_gamemode.get("paddle")
@@ -40,7 +40,7 @@ func init_gamemode() -> void:
 func end_gamemode() -> void:
 	if(current_gamemode): current_gamemode.queue_free()
 	get_tree().get_first_node_in_group("bola").get_node("BolaAnim2D").sprite_frames = preload("uid://bj2j5bk3e558j")
-	get_tree().get_first_node_in_group("Background").texture = preload("uid://dmjrpljo46b35")
+	get_tree().get_first_node_in_group("Background").sprite_frames = preload("uid://dq81bj50eno53")
 	for i in get_tree().get_nodes_in_group("Paddles"):
 		i.get_node("Anim2D"). sprite_frames = preload("uid://by0chl6ays0a1")
 	

@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://saot38re8e2q"]
+
+[ext_resource type="Texture2D" uid="uid://c7mf73pvkw6i" path="res://sprites/pac_man/PacMan21x21.png" id="1_mnnfj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncerg"]
+atlas = ExtResource("1_mnnfj")
+region = Rect2(0, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bobs2"]
+atlas = ExtResource("1_mnnfj")
+region = Rect2(21, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snqxp"]
+atlas = ExtResource("1_mnnfj")
+region = Rect2(42, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lnqu"]
+atlas = ExtResource("1_mnnfj")
+region = Rect2(63, 0, 21, 21)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncerg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bobs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snqxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lnqu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]

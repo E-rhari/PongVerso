@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://b1ammep8a5ck"]
+
+[ext_resource type="Texture2D" uid="uid://chcbdfq2bvt7s" path="res://sprites/prototyping/pacman.png" id="1_gp6yu"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gp6yu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

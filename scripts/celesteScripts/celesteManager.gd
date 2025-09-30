@@ -23,4 +23,4 @@ func _exit_tree() -> void:
 var music = preload("uid://bwolqsuw8n872")
 var ball = preload("uid://7wqrdrg1an12")
 var paddle = preload("uid://7mvrhekto7s2")
-var bg = preload("uid://dvd1y7jm5bhdo")
+var bg = preload("uid://3tnuw4u4t8kf")

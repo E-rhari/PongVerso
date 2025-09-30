@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkythkke1x1m8"]
+[gd_scene load_steps=6 format=3 uid="uid://bkythkke1x1m8"]
 
 [ext_resource type="FontFile" uid="uid://csvxw3nqqlmdg" path="res://fonts/Kenney Bold.ttf" id="1_fls4u"]
 [ext_resource type="Script" uid="uid://b1dqbbo88spt7" path="res://scripts/hud.gd" id="1_qpvh6"]
+[ext_resource type="FontFile" uid="uid://dfgqmua7g7avs" path="res://fonts/Kenney Thick.ttf" id="3_1etfg"]
 
 [sub_resource type="Theme" id="Theme_1etfg"]
 default_font = ExtResource("1_fls4u")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7hsmw"]
+font = ExtResource("3_1etfg")
+font_size = 8
 
 [node name="Hud" type="Control" groups=["Hud"]]
 layout_mode = 3
@@ -24,15 +29,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
+offset_left = -97.0
 offset_top = -12.0
-offset_right = -22.0
+offset_right = -51.5
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 pivot_offset = Vector2(6, 0)
 text = "0"
+horizontal_alignment = 2
 
 [node name="Pontuação Jogador 2" type="Label" parent="."]
 layout_mode = 1
@@ -43,13 +49,42 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 30.0
 offset_top = -12.0
-offset_right = 46.0
+offset_right = 82.0
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 pivot_offset = Vector2(6, 0)
 text = "0"
+
+[node name="Pontuação Menor 1" type="Label" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 17.0
+offset_bottom = 11.0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(6, 0)
+text = "0"
+label_settings = SubResource("LabelSettings_7hsmw")
+
+[node name="Pontuação Menor 2" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -46.0
+offset_top = 2.0
+offset_right = -21.0
+offset_bottom = 11.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(6, 0)
+text = "0"
+label_settings = SubResource("LabelSettings_7hsmw")
+horizontal_alignment = 2
 
 [node name="Recorde" type="Label" parent="."]
 visible = false

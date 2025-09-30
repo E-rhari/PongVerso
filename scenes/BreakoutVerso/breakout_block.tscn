@@ -16,6 +16,7 @@ rosa = Color(1, 0.6887288, 0.63938314, 1)
 vermelho = Color(1, 0.37799093, 0.31005007, 1)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.395, 0)
 sprite_frames = ExtResource("2_xmsxp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

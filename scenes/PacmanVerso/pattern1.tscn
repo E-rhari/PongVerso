@@ -82,6 +82,30 @@ position = Vector2(152, 230)
 [node name="Pellet26" parent="." instance=ExtResource("1_5ldy1")]
 position = Vector2(152, 250)
 
+[node name="Pellet33" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 110)
+
+[node name="Pellet34" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 130)
+
+[node name="Pellet35" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 150)
+
+[node name="Pellet36" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 170)
+
+[node name="Pellet37" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 190)
+
+[node name="Pellet38" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 210)
+
+[node name="Pellet44" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 230)
+
+[node name="Pellet70" parent="." instance=ExtResource("1_5ldy1")]
+position = Vector2(322, 250)
+
 [node name="Pellet62" parent="." instance=ExtResource("1_5ldy1")]
 position = Vector2(492, 110)
 
@@ -123,24 +147,6 @@ position = Vector2(232, 180)
 
 [node name="Pellet32" parent="." instance=ExtResource("1_5ldy1")]
 position = Vector2(252, 180)
-
-[node name="Pellet33" parent="." instance=ExtResource("1_5ldy1")]
-position = Vector2(272, 180)
-
-[node name="Pellet34" parent="." instance=ExtResource("1_5ldy1")]
-position = Vector2(292, 180)
-
-[node name="Pellet35" parent="." instance=ExtResource("1_5ldy1")]
-position = Vector2(312, 180)
-
-[node name="Pellet36" parent="." instance=ExtResource("1_5ldy1")]
-position = Vector2(332, 180)
-
-[node name="Pellet37" parent="." instance=ExtResource("1_5ldy1")]
-position = Vector2(352, 180)
-
-[node name="Pellet38" parent="." instance=ExtResource("1_5ldy1")]
-position = Vector2(372, 180)
 
 [node name="Pellet39" parent="." instance=ExtResource("1_5ldy1")]
 position = Vector2(392, 180)
