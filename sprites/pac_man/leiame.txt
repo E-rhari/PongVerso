@@ -1,0 +1,3 @@
+1. As cores são #61a2ff pro azul e #db41c3 pro rosa
+
+2. Pra inverter o playback da animação, basta mudar o speed_scale pra -1
