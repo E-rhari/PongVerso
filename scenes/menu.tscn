@@ -7,10 +7,12 @@
 [sub_resource type="GDScript" id="GDScript_vjb58"]
 script/source = "extends Control
 
+var screen_size : Vector2i
+
 func _ready() -> void:
+	screen_size = DisplayServer.screen_get_size()
 	if (OS.has_feature(\"mobile\")):
-		$Label.text = \"Toque na tela\\n para jogar\"
-		$MobileControls/WholeScreen.shape.size = Vector2(DisplayServer.screen_get_size())
+		$Label.text = \"Toque na tela\\n para iniciar\"
 
 func _input(event: InputEvent) -> void:
 	if(event.is_action_pressed(\"acao1\")):
@@ -28,6 +30,7 @@ font = ExtResource("2_con2f")
 font_size = 18
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_con2f"]
+size = Vector2(640, 360)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -69,6 +72,6 @@ autoplay = true
 [node name="MobileControls" type="CanvasLayer" parent="."]
 
 [node name="WholeScreen" type="TouchScreenButton" parent="MobileControls"]
-position = Vector2(352, 176)
+position = Vector2(320, 180)
 shape = SubResource("RectangleShape2D_con2f")
 action = "acao1"

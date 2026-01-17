@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://beqefd1edv0i0"]
+[gd_scene load_steps=16 format=3 uid="uid://beqefd1edv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://djrh6vkyv1s66" path="res://scenes/paddle.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://hwmrhglr676p" path="res://scenes/bola.tscn" id="2_0wfyh"]
@@ -21,6 +21,8 @@ size = Vector2(20, 360)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
 size = Vector2(20, 364)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya4ey"]
+size = Vector2(320, 120)
 [node name="main" type="Node"]
 
 [node name="Paddle" parent="." instance=ExtResource("1_o5qli")]
@@ -75,6 +77,44 @@ sprite_frames = ExtResource("10_ya4ey")
 stream = ExtResource("10_choun")
 volume_db = -10.0
 autoplay = true
+
+[node name="MobileControlers" type="CanvasLayer" parent="."]
+
+[node name="Cima0" type="TouchScreenButton" parent="MobileControlers"]
+position = Vector2(160, 60)
+shape = SubResource("RectangleShape2D_ya4ey")
+shape_centered = false
+action = "up0"
+
+[node name="Ação0" type="TouchScreenButton" parent="MobileControlers"]
+position = Vector2(160, 180)
+shape = SubResource("RectangleShape2D_ya4ey")
+shape_centered = false
+action = "acao0"
+
+[node name="Baixo0" type="TouchScreenButton" parent="MobileControlers"]
+position = Vector2(160, 300)
+shape = SubResource("RectangleShape2D_ya4ey")
+shape_centered = false
+action = "down0"
+
+[node name="Cima1" type="TouchScreenButton" parent="MobileControlers"]
+position = Vector2(480, 60)
+shape = SubResource("RectangleShape2D_ya4ey")
+shape_centered = false
+action = "up1"
+
+[node name="Ação1" type="TouchScreenButton" parent="MobileControlers"]
+position = Vector2(480, 180)
+shape = SubResource("RectangleShape2D_ya4ey")
+shape_centered = false
+action = "acao1"
+
+[node name="Baixo1" type="TouchScreenButton" parent="MobileControlers"]
+position = Vector2(480, 300)
+shape = SubResource("RectangleShape2D_ya4ey")
+shape_centered = false
+action = "down1"
 
 [connection signal="bateu_no_paddle" from="Bola" to="Hud" method="_on_bola_bateu_no_paddle"]
 [connection signal="gol" from="Bola" to="Hud" method="_on_bola_gol"]
