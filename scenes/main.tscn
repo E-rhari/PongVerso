@@ -23,6 +23,7 @@ size = Vector2(20, 364)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ya4ey"]
 size = Vector2(320, 120)
+
 [node name="main" type="Node"]
 
 [node name="Paddle" parent="." instance=ExtResource("1_o5qli")]
@@ -78,39 +79,39 @@ stream = ExtResource("10_choun")
 volume_db = -10.0
 autoplay = true
 
-[node name="MobileControlers" type="CanvasLayer" parent="."]
+[node name="MobileControls" type="CanvasLayer" parent="."]
 
-[node name="Cima0" type="TouchScreenButton" parent="MobileControlers"]
+[node name="Cima0" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(160, 60)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "up0"
 
-[node name="Ação0" type="TouchScreenButton" parent="MobileControlers"]
+[node name="Ação0" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(160, 180)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "acao0"
 
-[node name="Baixo0" type="TouchScreenButton" parent="MobileControlers"]
+[node name="Baixo0" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(160, 300)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "down0"
 
-[node name="Cima1" type="TouchScreenButton" parent="MobileControlers"]
+[node name="Cima1" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(480, 60)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "up1"
 
-[node name="Ação1" type="TouchScreenButton" parent="MobileControlers"]
+[node name="Ação1" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(480, 180)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "acao1"
 
-[node name="Baixo1" type="TouchScreenButton" parent="MobileControlers"]
+[node name="Baixo1" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2(480, 300)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false

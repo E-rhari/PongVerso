@@ -4,10 +4,10 @@ extends Node
 @export var debug_gamemode : Variant
 @export var start_on_pong : bool = true
 @onready var speaker = $"../AudioStreamPlayer"
+@onready var n_bag: Array[Script] = gamemodes.duplicate()
 var current_gamemode: Node
 var current_index: int
-var last_index: int
-
+var last_script: Script
 
 func init_gamemode() -> void:
 	
@@ -16,11 +16,16 @@ func init_gamemode() -> void:
 		game.set_script(gamemodes[debug_gamemode])
 		get_tree().get_first_node_in_group("bola").disconnect("gol", _on_bola_gol)
 	else:
-		current_index = randi() % gamemodes.size()
-		while(current_index == last_index):
-			current_index = randi() % gamemodes.size()
-		last_index = current_index
-		game.set_script(gamemodes[current_index])
+		if (n_bag.is_empty()):
+			n_bag = gamemodes.duplicate()
+			while (n_bag[current_index] == last_script):
+				current_index = randi() % n_bag.size()
+		else:
+			current_index = randi() % n_bag.size()
+		game.set_script(n_bag[current_index])
+		last_script = n_bag[current_index]
+		n_bag.remove_at(current_index)
+		
 	current_gamemode = game
 	add_child(game)
 	
