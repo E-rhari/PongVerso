@@ -8,11 +8,6 @@ var current_gamemode: Node
 var current_index: int
 var last_index: int
 
-#func _ready() -> void:
-	
-	#if (OS.has_feature("mobile")):
-		#$"../MobileControlers/Cima0"
-	#if (not start_on_pong or debug_gamemode): init_gamemode()
 
 func init_gamemode() -> void:
 	
