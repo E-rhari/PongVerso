@@ -7,15 +7,13 @@
 [sub_resource type="GDScript" id="GDScript_vjb58"]
 script/source = "extends Control
 
-var screen_size : Vector2i
 
 func _ready() -> void:
-	screen_size = DisplayServer.screen_get_size()
 	if (OS.has_feature(\"mobile\")):
 		$Label.text = \"Toque na tela\\n para iniciar\"
 
 func _input(event: InputEvent) -> void:
-	if(event.is_action_pressed(\"acao1\")):
+	if(event.is_action_pressed(\"acao1\") or event.is_action_pressed(\"acao0\")):
 		get_tree().root.add_child(preload(\"uid://beqefd1edv0i0\").instantiate())
 		queue_free()
 	if(event.is_action_pressed(\"ui_home\")):

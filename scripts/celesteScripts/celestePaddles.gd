@@ -45,11 +45,11 @@ func _physics_process(delta: float) -> void:
 	
 	else:
 		var move_input: float = Input.get_axis("up" + id, "down" + id)
-		velocity.y = Input.get_axis("up" + id, "down" + id) * speed
+		velocity.y = sign(Input.get_axis("up" + id, "down" + id)) * speed
 		move_and_slide()
 		
 		if (Input.is_action_just_pressed("acao" + id) and can_dash and move_input != 0):
-			start_dash(Input.get_axis("up" + id, "down" + id))
+			start_dash(sign(Input.get_axis("up" + id, "down" + id)))
 
 func start_dash(direction: float):
 	can_dash = false
