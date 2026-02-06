@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://jw2x70mrha7j"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://jw2x70mrha7j"]
 
 [ext_resource type="Texture2D" uid="uid://cir5q52wmtpdd" path="res://sprites/portal/paddlesPortal.png" id="1_6gt73"]
 

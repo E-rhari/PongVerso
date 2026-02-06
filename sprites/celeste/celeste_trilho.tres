@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dy7k6o8y7165g"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://dy7k6o8y7165g"]
 
 [ext_resource type="Texture2D" uid="uid://ropsp0af6oq1" path="res://sprites/celeste/celeste_trilhoSheet.png" id="1_kqckw"]
 

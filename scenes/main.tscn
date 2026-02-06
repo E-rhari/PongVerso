@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://beqefd1edv0i0"]
+[gd_scene format=3 uid="uid://beqefd1edv0i0"]
 
 [ext_resource type="PackedScene" uid="uid://djrh6vkyv1s66" path="res://scenes/paddle.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://hwmrhglr676p" path="res://scenes/bola.tscn" id="2_0wfyh"]
@@ -24,94 +24,94 @@ size = Vector2(20, 364)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ya4ey"]
 size = Vector2(320, 120)
 
-[node name="main" type="Node"]
+[node name="main" type="Node" unique_id=1087666224]
 
-[node name="Paddle" parent="." instance=ExtResource("1_o5qli")]
+[node name="Paddle" parent="." unique_id=425120625 instance=ExtResource("1_o5qli")]
 position = Vector2(100, 180)
 id = "0"
 
-[node name="Paddle2" parent="." instance=ExtResource("1_o5qli")]
+[node name="Paddle2" parent="." unique_id=1676414352 instance=ExtResource("1_o5qli")]
 position = Vector2(540, 180)
 id = "1"
 
-[node name="Bola" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Bola" parent="." unique_id=191729890 instance=ExtResource("2_0wfyh")]
 position = Vector2(322, 90)
 
-[node name="Teto" type="StaticBody2D" parent="." groups=["Paredes"]]
+[node name="Teto" type="StaticBody2D" parent="." unique_id=869594595 groups=["Paredes"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto" unique_id=1652101842]
 position = Vector2(320, -10)
 shape = SubResource("RectangleShape2D_0wfyh")
 
-[node name="Chão" type="StaticBody2D" parent="." groups=["Paredes"]]
+[node name="Chão" type="StaticBody2D" parent="." unique_id=83571898 groups=["Paredes"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão" unique_id=1288187255]
 position = Vector2(321, 371)
 shape = SubResource("RectangleShape2D_0wfyh")
 
-[node name="GolDir" type="Area2D" parent="." groups=["GolDir"]]
+[node name="GolDir" type="Area2D" parent="." unique_id=2075165234 groups=["GolDir"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GolDir"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolDir" unique_id=393450235]
 position = Vector2(651, 181)
 shape = SubResource("RectangleShape2D_sugp2")
 
-[node name="GolEsq" type="Area2D" parent="." groups=["GolEsq"]]
+[node name="GolEsq" type="Area2D" parent="." unique_id=14301547 groups=["GolEsq"]]
 position = Vector2(322, 90)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GolEsq"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolEsq" unique_id=607547019]
 position = Vector2(-334, 93)
 shape = SubResource("RectangleShape2D_jyhfs")
 
-[node name="Hud" parent="." instance=ExtResource("4_jyhfs")]
+[node name="Hud" parent="." unique_id=1419203127 instance=ExtResource("4_jyhfs")]
 z_index = -1
 
-[node name="Manager" type="Node" parent="."]
+[node name="Manager" type="Node" parent="." unique_id=1946377582]
 script = ExtResource("5_tbgi4")
 gamemodes = Array[Script]([ExtResource("7_o6xl0"), ExtResource("7_tipki"), ExtResource("8_85g3d"), ExtResource("6_tefeu"), ExtResource("9_ya4ey")])
 
-[node name="Background" type="AnimatedSprite2D" parent="." groups=["Background"]]
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=547210801 groups=["Background"]]
 z_index = -2
 position = Vector2(320, 180)
 sprite_frames = ExtResource("10_ya4ey")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1033316524]
 stream = ExtResource("10_choun")
 volume_db = -10.0
 autoplay = true
 
-[node name="MobileControls" type="CanvasLayer" parent="."]
+[node name="MobileControls" type="CanvasLayer" parent="." unique_id=104890556]
 
-[node name="Cima0" type="TouchScreenButton" parent="MobileControls"]
+[node name="Cima0" type="TouchScreenButton" parent="MobileControls" unique_id=1610206856]
 position = Vector2(160, 60)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "up0"
 
-[node name="Ação0" type="TouchScreenButton" parent="MobileControls"]
+[node name="Ação0" type="TouchScreenButton" parent="MobileControls" unique_id=1323345892]
 position = Vector2(160, 180)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "acao0"
 
-[node name="Baixo0" type="TouchScreenButton" parent="MobileControls"]
+[node name="Baixo0" type="TouchScreenButton" parent="MobileControls" unique_id=523622630]
 position = Vector2(160, 300)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "down0"
 
-[node name="Cima1" type="TouchScreenButton" parent="MobileControls"]
+[node name="Cima1" type="TouchScreenButton" parent="MobileControls" unique_id=5607539]
 position = Vector2(480, 60)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "up1"
 
-[node name="Ação1" type="TouchScreenButton" parent="MobileControls"]
+[node name="Ação1" type="TouchScreenButton" parent="MobileControls" unique_id=1634041901]
 position = Vector2(480, 180)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false
 action = "acao1"
 
-[node name="Baixo1" type="TouchScreenButton" parent="MobileControls"]
+[node name="Baixo1" type="TouchScreenButton" parent="MobileControls" unique_id=742850226]
 position = Vector2(480, 300)
 shape = SubResource("RectangleShape2D_ya4ey")
 shape_centered = false

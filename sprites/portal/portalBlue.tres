@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://24wclmburfy0"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://24wclmburfy0"]
 
 [ext_resource type="Texture2D" uid="uid://q5bxqvwhtcg2" path="res://sprites/portal/portalBlue.png" id="1_8dbur"]
 

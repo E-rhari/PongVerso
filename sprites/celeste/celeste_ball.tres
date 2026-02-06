@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://7wqrdrg1an12"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://7wqrdrg1an12"]
 
 [ext_resource type="Texture2D" uid="uid://coc3pjns0jiv5" path="res://sprites/celeste/celese_ballSheet.png" id="1_hqkkd"]
 

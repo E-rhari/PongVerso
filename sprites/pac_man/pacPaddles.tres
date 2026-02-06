@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://c7ligskuv0d15"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://c7ligskuv0d15"]
 
 [ext_resource type="Texture2D" uid="uid://cmdqp7ol2qlip" path="res://sprites/pac_man/paddlesPacMan.png" id="1_xecjj"]
 

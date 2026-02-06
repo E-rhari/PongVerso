@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://m1h1mhqw6m4q"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://m1h1mhqw6m4q"]
 
 [ext_resource type="Texture2D" uid="uid://b0rsgikw10t32" path="res://sprites/pac_man/pacManFundoAnimado.png" id="1_cux6t"]
 

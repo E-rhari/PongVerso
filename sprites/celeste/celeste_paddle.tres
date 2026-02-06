@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://7mvrhekto7s2"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://7mvrhekto7s2"]
 
 [ext_resource type="Texture2D" uid="uid://c8fu2xerivb4g" path="res://sprites/celeste/celeste_paddle.png" id="1_ibm72"]
 
