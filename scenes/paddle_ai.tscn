@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://o06t237i4xxn"]
+
+[ext_resource type="Script" uid="uid://cr4or34xn0hm5" path="res://scripts/AIRelatedScripts/paddle_ai.gd" id="1_dciaj"]
+[ext_resource type="SpriteFrames" uid="uid://by0chl6ays0a1" path="res://sprites/pong_default/paddle.tres" id="2_gw4o1"]
+[ext_resource type="Script" uid="uid://ddjk0b8ctbuir" path="res://scripts/AIRelatedScripts/state_machine.gd" id="3_gw4o1"]
+[ext_resource type="Script" uid="uid://cc1eqeb768cy2" path="res://scenes/chase.gd" id="4_e63r0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4dg"]
+size = Vector2(12, 60)
+
+[node name="PaddleAi" type="CharacterBody2D" unique_id=1007944107 groups=["Paddles"]]
+motion_mode = 1
+script = ExtResource("1_dciaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1006033510]
+shape = SubResource("RectangleShape2D_mo4dg")
+
+[node name="Anim2D" type="AnimatedSprite2D" parent="." unique_id=188925761]
+sprite_frames = ExtResource("2_gw4o1")
+
+[node name="StateMachine" type="Node2D" parent="." unique_id=1072619824]
+script = ExtResource("3_gw4o1")
+
+[node name="Chase" type="Node2D" parent="StateMachine" unique_id=207465009]
+script = ExtResource("4_e63r0")
