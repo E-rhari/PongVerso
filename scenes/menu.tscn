@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bssgjguak5b00"]
+[gd_scene format=3 uid="uid://bssgjguak5b00"]
 
 [ext_resource type="Texture2D" uid="uid://pjh3lhb5lw3b" path="res://sprites/mainmenu/pongMENU.png" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://cw4s4enqdlii5" path="res://fonts/Kenney Space.ttf" id="2_con2f"]
@@ -14,8 +14,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if(event.is_action_pressed(\"acao1\") or event.is_action_pressed(\"acao0\")):
-		get_tree().root.add_child(preload(\"uid://beqefd1edv0i0\").instantiate())
-		queue_free()
+		get_tree().change_scene_to_file(\"res://scenes/main.tscn\")
 	if(event.is_action_pressed(\"ui_home\")):
 		if (DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN):
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
@@ -30,7 +29,16 @@ font_size = 18
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_con2f"]
 size = Vector2(640, 360)
 
-[node name="Menu" type="Control"]
+[sub_resource type="GDScript" id="GDScript_con2f"]
+script/source = "extends SpinBox
+
+func _ready() -> void:
+	var line_edit = get_line_edit()
+	line_edit.context_menu_enabled = false
+	#horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT
+"
+
+[node name="Menu" type="Control" unique_id=831292561]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_vjb58")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=500921846]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,7 +56,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_vjb58")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1677316009]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -62,14 +70,42 @@ text = "Aperte ENTER
 para jogar"
 label_settings = SubResource("LabelSettings_mhnvy")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=2066585651]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = -150.0
+offset_right = 267.0
+offset_bottom = -89.0
+grow_vertical = 0
+text = "Aperte ENTER
+para jogar"
+label_settings = SubResource("LabelSettings_mhnvy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=99036601]
 stream = ExtResource("3_con2f")
 volume_db = -5.0
 autoplay = true
 
-[node name="MobileControls" type="CanvasLayer" parent="."]
+[node name="MobileControls" type="CanvasLayer" parent="." unique_id=2025470685]
 
-[node name="WholeScreen" type="TouchScreenButton" parent="MobileControls"]
+[node name="WholeScreen" type="TouchScreenButton" parent="MobileControls" unique_id=151769363]
 position = Vector2(320, 180)
 shape = SubResource("RectangleShape2D_con2f")
 action = "acao1"
+
+[node name="SpinBox" type="SpinBox" parent="." unique_id=636376064]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 191.0
+offset_right = 341.5
+offset_bottom = 222.0
+min_value = 5.0
+max_value = 9.0
+step = 2.0
+value = 9.0
+rounded = true
+alignment = 1
+script = SubResource("GDScript_con2f")
